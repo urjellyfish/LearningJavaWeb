@@ -1,20 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package controller;
- 
+
 import bean.LoginBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
- 
+
 /**
  *
- * @author viquy
+ * @author Hoang Tran
  */
+@WebServlet(name = "ControllerServlet", urlPatterns = {"/ControllerServlet"})
 public class ControllerServlet extends HttpServlet {
- 
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,7 +39,7 @@ public class ControllerServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ControllerServlet</title>");
+            out.println("<title>Servlet ControllerServlet</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet ControllerServlet at " + request.getContextPath() + "</h1>");
@@ -40,7 +47,7 @@ public class ControllerServlet extends HttpServlet {
             out.println("</html>");
         }
     }
- 
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -55,7 +62,7 @@ public class ControllerServlet extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
- 
+
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -82,7 +89,7 @@ public class ControllerServlet extends HttpServlet {
             rd.forward(request, response);
         }
     }
- 
+
     /**
      * Returns a short description of the servlet.
      *
@@ -92,5 +99,5 @@ public class ControllerServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
- 
+
 }
